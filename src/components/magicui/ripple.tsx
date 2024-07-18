@@ -9,7 +9,7 @@ interface RippleProps {
 const Ripple = React.memo(function Ripple({
   mainCircleSize = 210,
   mainCircleOpacity = 0.24,
-  numCircles = 8,
+  numCircles = 12,
 }: RippleProps) {
   return (
     <div className="absolute inset-0 flex items-center justify-center bg-white/5 [mask-image:linear-gradient(to_bottom,white,transparent)]">
@@ -32,7 +32,9 @@ const Ripple = React.memo(function Ripple({
                 animationDelay: animationDelay,
                 borderStyle: borderStyle,
                 borderWidth: "1px",
-                borderColor: `rgba(var(--foreground-rgb), ${borderOpacity / 100})`,
+                borderColor: `rgba(var(--foreground-rgb), ${
+                  borderOpacity / 100
+                })`,
               } as CSSProperties
             }
           />
