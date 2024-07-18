@@ -1,32 +1,33 @@
-'use client'
+"use client";
 import { AnimatePresence } from "framer-motion";
-import Preloader from '../components/Preloader'
-import Image from "next/image";
+import Preloader from "../components/Preloader";
 import { useState, useEffect } from "react";
+import Hero from "@/components/Hero";
+import Header from "@/components/Header";
+import Image from "next/image";
 
 export default function Home() {
-  
   const [isLoading, setIsLoading] = useState(true);
 
-  useEffect( () => {
-    (
-      async () => {
-          const LocomotiveScroll = (await import('locomotive-scroll')).default
-          const locomotiveScroll = new LocomotiveScroll();
+  useEffect(() => {
+    (async () => {
+      const LocomotiveScroll = (await import("locomotive-scroll")).default;
+      const locomotiveScroll = new LocomotiveScroll();
 
-          setTimeout( () => {
-            setIsLoading(false);
-            document.body.style.cursor = 'default'
-            window.scrollTo(0,0);
-          }, 2000)
-      }
-    )()
-  }, [])
+      setTimeout(() => {
+        setIsLoading(false);
+        document.body.style.cursor = "default";
+        window.scrollTo(0, 0);
+      }, 2000);
+    })();
+  }, []);
   return (
-    <main >
+    <main>
       <AnimatePresence mode="wait">
-        {isLoading && <Preloader/>}
-    </AnimatePresence>
+        {isLoading && <Preloader />}
+      </AnimatePresence>
+
+      <Hero />
     </main>
   );
 }
