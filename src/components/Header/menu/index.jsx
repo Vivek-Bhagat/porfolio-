@@ -3,6 +3,7 @@ import { opacity, slideLeft, mountAnim } from "../anim";
 import styles from "./style.module.scss";
 import Link from "./link";
 import { useState } from "react";
+import link from "./link";
 
 const menu = [
   {
@@ -14,6 +15,11 @@ const menu = [
     title: "Agence",
     description: "To Learn Everything",
     images: ["agence1.jpg", "agence2.jpg"],
+  },
+  {
+    title: "About",
+    description: "To Know About Us",
+    images: ["about1.jpg", "about2.jpg"],
   },
   {
     title: "Contact",
