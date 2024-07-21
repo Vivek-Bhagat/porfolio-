@@ -22,7 +22,7 @@ const menu = [
   },
 ];
 
-export default function index({ closeMenu, menu }) {
+export default function index({ closeMenu }) {
   return (
     <motion.div
       className={styles.menu}
