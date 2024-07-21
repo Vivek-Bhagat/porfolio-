@@ -50,11 +50,8 @@ export default function index({ closeMenu, menu }) {
       </div>
 
       <div className={styles.body}>
-        {menu.map((el, index, menu) => {
-          return (
-            <Link data={el} index={index} key={index} />
-            // console.log(menu);
-          );
+        {menu.map((el, index) => {
+          return <Link data={el} index={index} key={index} />;
         })}
       </div>
 
