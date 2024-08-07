@@ -48,7 +48,7 @@ export default function link({ data, index }) {
       custom={index}
       className={styles.el}
     >
-      <Link href="/About">{title}</Link>
+      <Link href="/">{title}</Link>
       <div ref={outer} className={styles.outer}>
         <div ref={inner} className={styles.inner}>
           {[...Array(2)].map((_, index) => {

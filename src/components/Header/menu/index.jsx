@@ -3,6 +3,7 @@ import { opacity, slideLeft, mountAnim } from "../anim";
 import styles from "./style.module.scss";
 import Link from "./link";
 import { useState } from "react";
+import { title } from "process";
 
 const menu = [
   {
@@ -54,7 +55,7 @@ export default function index({ closeMenu }) {
           return <Link data={el} index={index} key={index} />;
         })}
       </div>
-
+      {/* <Link href="/">{title}</Link> */}
       {/* <motion.div 
           variants={opacity} 
           {...mountAnim} 
